@@ -10,13 +10,13 @@ public abstract class Pessoa {
     private Integer limiteEmprestimos;
     List<Emprestimo> emprestimosAtivos;
 
-    public Pessoa(Long id, String nome, String email, String telefone, Integer limiteEmprestimos, List<Emprestimo> emprestimosAtibos) {
+    public Pessoa(Long id, String nome, String email, String telefone, Integer limiteEmprestimos, List<Emprestimo> emprestimosAtivos) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
         this.limiteEmprestimos = limiteEmprestimos;
-        this.emprestimosAtibos = emprestimosAtibos;
+        this.emprestimosAtivos = emprestimosAtivos;
     }
 
     public Long getId() {
@@ -63,7 +63,9 @@ public abstract class Pessoa {
         return emprestimosAtivos;
     }
 
-    public void setEmprestimosAtibos(List<Emprestimo> emprestimosAtibos) {
-        this.emprestimosAtivos = emprestimosAtibos;
+    public void setEmprestimosAtivos(List<Emprestimo> emprestimosAtivos) {
+        this.emprestimosAtivos = emprestimosAtivos;
     }
+
+    public abstract Boolean podeRealizarEmprestimo();
 }

@@ -28,8 +28,8 @@ public class Aluno extends Pessoa {
         this.curso = curso;
     }
 
-    public boolean podeRealizarEmprestimo() {
-        return getEmprestimosAtivos().size() < getLimiteEmprestimos();
+    public Boolean podeRealizarEmprestimo() {
+        return getEmprestimosAtivos().size() <= getLimiteEmprestimos();
     }
 
 }

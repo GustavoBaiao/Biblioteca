@@ -18,8 +18,8 @@ public class Professor extends Pessoa{
         this.departamento = departamento;
     }
 
-    public boolean podeRealizarEmprestimo() {
-        return getEmprestimosAtivos().size() < getLimiteEmprestimos();
+    public Boolean podeRealizarEmprestimo() {
+        return getEmprestimosAtivos().size() <= getLimiteEmprestimos();
     }
 
 }
